@@ -1,0 +1,20 @@
+@model MvcIntroViews.ViewModels.LojaViewModel
+@{
+    ViewData["Title"] = "Loja";
+}
+
+<h1>Loja @Model.Id</h1>
+
+<hr size="5">
+
+<h3>@Model.Nome</h3>
+
+<hr>
+
+<p>Id: @Model.Id</p>
+<p>Piso: @Model.Piso</p>
+<p>Descrição: @Model.Descricao</p>
+<p>Tipo: @Model.Tipo</p>
+<p>E-mail: @Model.Email</p>
+
+<a href="/Loja/DeleteLoja/@Model.Id"><button>Excluir Loja</button></a>

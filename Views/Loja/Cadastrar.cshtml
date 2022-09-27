@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<h3>Cadastrar Loja</h3>
+
+<p>Selecione o piso:</p>
+<form asp-action="CreateLoja" method="post">
+    <select name="piso" id="piso">
+        <option value="Piso 1">Piso 1</option>
+        <option value="Piso 2">Piso 2</option>
+        <option value="Piso 3">Piso 3</option>
+    </select>
+
+    <hr>
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome">
+
+    <hr>
+
+    <label for="descricao">Descrição</label>
+    <input type="text" name="descricao" id="descricao">
+
+    <hr>
+    
+    <p>Selecione o tipo de estabelecimento:</p>
+    <select name="tipo" id="tipo">
+        <option value="Loja">Loja</option>
+        <option value="Kiosque">Kiosque</option>
+    </select>
+
+    <hr>
+
+    <label for="email">E-mail</label>
+    <input type="email" name="email" id="email">
+
+    <hr>
+
+    <input type="submit" value="Cadastrar">
+</form>

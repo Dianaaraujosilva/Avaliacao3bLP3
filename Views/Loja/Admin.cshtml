@@ -1,0 +1,37 @@
+@model List<MvcIntroViews.ViewModels.LojaViewModel>
+@{
+    ViewData["Title"] = "Gerenciamento de Lojas";
+}
+
+@if(Model.Count == 0)
+{
+    <h3>Não há cadastro de nenhuma loja.</h3>
+
+    <hr size="5">
+
+    <a href="/Loja/Cadastrar"><button>Cadastrar Loja</button></a>
+} 
+else
+{
+    <h1>Lojas</h1>
+
+    <hr size="5">
+
+    @foreach(var loja in Model)
+    {
+        <h3>@loja.Nome</h3>
+
+        <hr>
+
+        <p>Id: @loja.Id</p>
+        <p>Piso: @loja.Piso</p>
+        <p>Descrição: @loja.Descricao</p>
+        <p>Tipo: @loja.Tipo</p>
+        <p>E-mail: @loja.Email</p>
+
+        <a href="/Loja/Show/@loja.Id"><button>Detalhes</button></a>
+        <a href="/Loja/DeleteLoja/@loja.Id"><button>Excluir Loja</button></a>
+        
+        <hr size="5">
+    }
+}
